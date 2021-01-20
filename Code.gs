@@ -3,9 +3,10 @@
  * Searches for emails from excel file in
  * organizational directory & outputs in
  * tabular format in google documents
- * REPLACE: inputs that require modification
+ * REPLACE: placeholders that require modification
  * - Input_Spreadsheet_Name: name of spreadsheet
  * - Input_SpreadSheet_ID: ID of spreadhsheet
+ * - Output_Document_Name: name of output doc
  */
 
 function listUsers() {
@@ -40,7 +41,7 @@ function listUsers() {
   }
 
   // create google document & add information in tabular format
-  var doc = DocumentApp.create('Chem 3A Emails');
+  var doc = DocumentApp.create('REPLACE: Output_Document_Name');
   var body = doc.getBody();
   body.insertParagraph(0, doc.getName())
     .setHeading(DocumentApp.ParagraphHeading.HEADING1);
